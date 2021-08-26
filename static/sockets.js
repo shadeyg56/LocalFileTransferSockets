@@ -52,7 +52,6 @@ socket.on("file_received", function(data){
     var name = "download." + data["ext"];
     var url = window.URL.createObjectURL(blob);
     var sender = data["sender"];
-    "File sent from " + sender
     var download = document.createElement("a");
     var text = document.createTextNode("File sent from " + sender);
     download.appendChild(text);
