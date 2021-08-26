@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Websocket Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript" src="static/sockets.js"></script>
+    <link type="text/css" rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<div class="main">
+    <h3>Users</h3>
+    <ul id="list">
+    </ul>
+    <div id=msgs></div>
+    <input type=text id=msg_box placeholder="Enter Message">
+    <button onclick="sendMessage()">Send Message</button>
+    <!-- <input type=file id=img onchange="sendImage()"> -->
+    <button onclick="filePopup()">Send File</button>
+</div>
+<div class="popup" id="popup">
+    <div id="clients">
+        <button onclick="closeFilePopup()" id="closePopup">&#10006;</button>
+        <p style="font-size: 30px;">Recipients</p>
+        <input type="file" id="file">
+        <button id="file-submit" onclick="sendFile()">Send File</button>
+    </div>
+</div>
+</body>
+</html>
